@@ -1,0 +1,9 @@
+package com.zup.vacinacaozupapi.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("vacinacaozup/usuario")
+public class UsuarioController {
+
+}

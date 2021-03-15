@@ -1,0 +1,124 @@
+package com.zup.vacinacaozupapi.model;
+
+import java.io.Serializable;
+import java.rmi.server.UID;
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters.LocalDateTimeConverter;
+
+import antlr.collections.List;
+
+@Entity
+@Table(name = "usuario")
+public class Usuario {
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id; 
+	
+	@NotNull
+	private String nome;
+	
+	//@NotNull
+	//@Email
+	@Column(name = "e_mail", unique = true)
+	
+	//@OneToMany(mappedBy = "usuario")
+	private String email;
+	
+	//@NotNull
+	@Column(name = "cpf", unique = true)
+	private String cpf;	
+	
+	@Column(name = "data_de_nascimento")
+	private LocalDate  dataNascimento;
+	
+	@OneToMany(mappedBy = "usuario")
+	private String vacina;
+	
+	
+	
+
+	
+	
+	public String getVacina() {
+		return vacina;
+	}
+
+
+
+	public void setVacina(String vacina) {
+		this.vacina = vacina;
+	}
+
+
+
+	public Long getId() { 
+		return id;
+	}
+	
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getCpf() {
+		return cpf;
+	}
+
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+
+
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
+	}
+
+
+
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+	
+	
+
+	
+
+}

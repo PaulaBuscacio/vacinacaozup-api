@@ -1,0 +1,14 @@
+package com.zup.vacinacaozupapi.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.zup.vacinacaozupapi.model.Usuario;
+
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+	
+	Usuario findByEmail(String email);
+	Usuario findByCpf(String cpf);
+
+}

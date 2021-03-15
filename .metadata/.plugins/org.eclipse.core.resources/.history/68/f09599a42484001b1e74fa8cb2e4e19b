@@ -1,0 +1,5 @@
+package com.zup.vacinacaozupapi.model;
+
+public class Usuario {
+
+}

@@ -1,0 +1,5 @@
+package com.zup.vacinacaozupapi.repository;
+
+public interface VacinaRepository {
+
+}

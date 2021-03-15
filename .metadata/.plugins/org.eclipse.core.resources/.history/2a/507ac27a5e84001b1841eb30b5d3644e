@@ -1,0 +1,15 @@
+package com.zup.vacinacaozupapi;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class VacinacaozupApiApplication {
+
+	public static void main(String[] args) {
+		
+		SpringApplication.run(VacinacaozupApiApplication.class, args);
+		System.out.println("oi");
+	}
+
+}

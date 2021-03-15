@@ -1,0 +1,5 @@
+package com.zup.vacinacaozupapi.controller;
+
+public class UsuarioController {
+
+}

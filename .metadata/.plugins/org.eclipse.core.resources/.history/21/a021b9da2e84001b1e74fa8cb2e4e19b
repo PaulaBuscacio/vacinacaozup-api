@@ -1,0 +1,21 @@
+package com.zup.vacinacaozupapi.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.zup.vacinacaozupapi.model.Usuario;
+import com.zup.vacinacaozupapi.service.UsuarioService;
+
+@RestController
+@RequestMapping("vacinacaozup/usuario")
+public class UsuarioController {
+	
+	@Autowired
+	private UsuarioService usuarioService;
+	
+	@PostMapping("")
+	public Usuario cadastrar(@RequestBody Usuario usuario) {
+		
+	}
+
+}
